@@ -94,9 +94,7 @@ noremap <A-x> "+x
 " spell check
  nmap <Leader>l :setlocal spell! spelllang=en_gb<CR>
 
-call pathogen#incubate()
-call pathogen#helptags()
-call pathogen#infect()
+au BufReadPost *.ts set syntax=javascript
 
 filetype plugin indent on
 
