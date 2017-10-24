@@ -14,6 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
 
 
 " All of your Plugins must be added before the following line
@@ -32,6 +33,22 @@ set foldlevel=99
 
 " Enable folding with the spacebar
 nnoremap <space> za
+
+
+" Python stuff
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+
+" Bad whitespace stuff
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
 
 " Leftover stuff
 colorscheme colorsbox-stbright
