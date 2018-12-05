@@ -19,11 +19,6 @@ nnoremap <space> za
 " Python stuff
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
 
-
-" Bad whitespace stuff
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
-
 " Leftover stuff
 colorscheme colorsbox-stbright
 
